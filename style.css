@@ -1,0 +1,304 @@
+/* Base Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+body {
+  font-family: Arial;
+  line-height: 1.6;
+  padding-top: 70px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.navbar {
+  background: #1e3a8a;
+  color: #fff;
+  padding: 16px 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size:25px;
+  font-weight: 600;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding:8px 16px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+
+.nav-links a:hover {
+  background: #facc15;
+  color: #1e3a8a;
+}
+
+
+.hero {
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 0 16px;
+}
+
+.hero-content h1 {
+  font-size: 45px;
+  margin-bottom: 16px;
+}
+
+.hero-content p {
+  margin-bottom: 24px;
+  font-size: 19px;
+}
+
+.btn {
+  display: inline-block;
+  background: #facc15;
+  color: #1e3a8a;
+  padding: 0.75rem 1.5rem;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #fbbf24;
+}
+
+
+.section {
+  padding: 64px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 24px;
+  color: #1e3a8a;
+}
+
+/* Grid Cards */
+.grid {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  padding: 16px;
+  transition: transform 0.3s;
+  width: 300px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  background-color: #facc15;
+}
+
+.card img {
+  width: 100%;
+  height: 300px;
+  /* object-fit: cover; */
+  border-radius: 12px;
+}
+
+.price {
+  display: block;
+  margin-top: 16px;
+  font-weight: 700;
+  color: #1e3a8a;
+}
+
+/* About Section */
+#abt {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 64px 0;
+  gap: 24px;
+  padding: 24px;
+}
+
+.d1 {
+  flex: 1 1 45%;
+}
+
+.d1 img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  animation-duration:5s;
+}
+#abt .d1 img:hover{
+  transform: rotateX(25px);
+}
+
+.d1 h2 {
+  color: #1e3a8a;
+  margin-bottom: 16px;
+}
+
+.d1 p {
+  margin-bottom: 16px;
+  color: #333;
+  line-height: 1.7;
+}
+
+/* Footer */
+.footer {
+  background: #1e3a8a;
+  color: #fff;
+  text-align: center;
+  padding: 24px 0;
+  font-size:16px;
+}
+
+#footersec {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.footerdiv {
+  width: 22%;
+  min-width: 250px;
+  text-align: left;
+}
+
+.footerdiv ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footerdiv li,
+.footerdiv a {
+  color: #dbeafe;
+  line-height: 1.6;
+  text-decoration: none;
+}
+
+.footerdiv a:hover {
+  color: #facc15;
+}
+
+#mail,
+#btnm {
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 30px;
+  margin-top: 10px;
+  padding: 8px;
+}
+
+#btnm {
+  background-color: #0f62fe;
+  color: white;
+  cursor: pointer;
+}
+.h1{
+  text-align: center;
+}
+
+
+
+/* Tablet View */
+@media (max-width:1024px) {
+  .hero-content h1 {
+    font-size: 35px;
+  }
+
+  .nav-links {
+    gap: 16px;
+  }
+
+  #abt {
+    flex-direction: column;
+  }
+
+  .footerdiv {
+    width: 45%;
+  }
+}
+
+/* phone View */
+@media (max-width:425px) {
+  .nav-container {
+    flex-direction: row;
+    gap: 16px;
+  }
+
+  .nav-links {
+    flex-direction:column;
+    align-items: center;
+    display: block;
+  }
+
+  .hero {
+    height:630px;
+  }
+
+  .hero-content h1 {
+    font-size: 29px;
+  }
+
+  .grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerdiv {
+    width: 90%;
+    text-align: center;
+  }
+
+  #abt {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .d1 img {
+    width: 90%;
+  }
+}
